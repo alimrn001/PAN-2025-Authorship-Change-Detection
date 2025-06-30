@@ -83,7 +83,7 @@ class CrossAttnLaBSE(torch.nn.Module):
 
 
 def load_fasttext(path):
-    fasttext_path = hf_hub_download(repo_id=hf_repo_id, filename="FastText/crawl-300d-2M-subword.bin")
+    fasttext_path = hf_hub_download(repo_id=hf_repo_id, filename="FastText/crawl-300d-2M-subword.bin", local_files_only=True)
     # Load model
     return load_facebook_model(fasttext_path).wv
 
